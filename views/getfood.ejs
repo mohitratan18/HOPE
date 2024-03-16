@@ -1,0 +1,22 @@
+<%- include("partials/header"); -%>
+<div class="cont">
+  <%lists.forEach((list)=>{%>
+  <form method="post" action="/getfood">
+    <div class="datebayoo">
+      <h2 class="common">DONATOR NAME</h2>
+      <p class=" oneforall"><%=list.name%></p>
+      <h2 class="common">LOCATION</h2>
+      <p class=" oneforall"><%=list.location%></p>
+      <h2 class="common">Navigate Through Maps</h2>
+      <a href=<%=list.map%>>
+        <p class=" oneforall">CLICK TO NAVIGATE</p>
+      </a>
+      <h2 class="common">Phone No.</h2>
+      <p class=" oneforall"><%=list.phone%></p>
+      <h2 class="common">Food Quantity</h2>
+      <p class=" oneforall"><%=list.food_quantity%></p>
+      <p class="done"><q>After Donating Please inform Us at grow.hope@gmail.com</q></p>
+    </div>
+  </form>
+  <%})%>
+</div>

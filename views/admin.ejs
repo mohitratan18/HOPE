@@ -1,0 +1,22 @@
+<%- include("partials/header"); -%>
+<div class="cont">
+  <%lists.forEach((list)=>{%>
+  <form method="post" action="/getfood">
+    <div class="datebayoo">
+      <h2>DONATOR NAME</h2>
+      <p class=" oneforall"><%=list.name%></p>
+      <h2>LOCATION</h2>
+      <p class=" oneforall"><%=list.location%></p>
+      <h2>Navigate Through Maps</h2>
+      <a href="">
+        <p class=" oneforall"><%=list.map%></p>
+      </a>
+      <h2>Phone No.</h2>
+      <p class=" oneforall"><%=list.phone%></p>
+      <h2>Food Quantity</h2>
+      <p class=" oneforall"><%=list.food_quantity%></p>
+      <button name="btn" type="submit" value=<%=list._id%>>DELETE</button>
+    </div>
+  </form>
+  <%})%>
+</div>
